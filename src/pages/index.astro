@@ -1,9 +1,13 @@
 ---
-import Banner from "./components/banner.astro";
-import Navbar from "./components/navbar.astro";
+import Banner from "../components/banner.astro";
+import Navbar from "../components/navbar.astro";
+import Projects from "../components/projects.astro";
 ---
 
-<html lang="en" class="scroll-smooth">
+<html
+  lang="en"
+  class="scroll-smooth"
+>
   <head>
     <meta charset="utf-8" />
     <link
@@ -22,8 +26,8 @@ import Navbar from "./components/navbar.astro";
     <title>Jason's Portfolio</title>
   </head>
   <body class="bg-gray-900 text-bone">
-    <Navbar />
-    <Banner goto="#after"/>
-    <h1 id="after"> after here</h1>
+    <Navbar class="sticky" />
+    <Banner goto="#projects" />
+    <Projects id="projects" />
   </body>
 </html>

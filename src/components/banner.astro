@@ -1,0 +1,203 @@
+---
+interface Props {
+  goto?: string;
+}
+
+const { goto = "#" } = Astro.props;
+---
+
+<div class="flex items-center justify-center h-[calc(100vh-3.5rem)] w-full relative z-0 shadow-lg">
+  <div class="flex flex-col w-full items-center justify-center space-y-8 z-10">
+    <h1 class="text-6xl text-center sm:text-7xl drop-shadow-xl select-none tracking-wider">NAME HERE</h1>
+    <a
+      class="border-2 py-2 px-7 text-xl sm:text-2xl hover:border-gray-400"
+      href={goto}
+      >Projects</a
+    >
+  </div>
+  <div class="purple-gradient absolute w-full h-full">
+    <div class="shapes absolute w-full h-full overflow-hidden">
+      <div class="rectRight"></div>
+      <div class="rectUp"></div>
+      <div class="triDown"></div>
+      <div class="die1"></div>
+      <div class="die2"></div>
+      <div class="die3"></div>
+      <div class="die4"></div>
+      <div class="circleDown"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .purple-gradient {
+    background: rgb(120, 73, 213);
+    background: linear-gradient(
+      0deg,
+      rgba(120, 73, 213, 1) 0%,
+      rgba(75, 21, 162, 1) 42%,
+      var(--theme-darkp) 100%
+    );
+  }
+
+  :root {
+    --shape-bg: rgba(255, 255, 255, 0.3);
+    --theme-darkp: theme("colors.darkp");
+  }
+
+  .shapes div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--shape-bg);
+    border-radius: 25%;
+  }
+
+  .shapes .rectRight {
+    width: 150px;
+    height: 150px;
+    bottom: -80px;
+    animation:
+      moveRight 30s linear infinite,
+      pulse 30s linear infinite;
+  }
+
+  .shapes .rectUp {
+    width: 300px;
+    height: 300px;
+    right: 200px;
+    bottom: -300px;
+    animation:
+      moveUp 25s linear 2s infinite,
+      pulse 25s linear 2s infinite;
+  }
+
+  .shapes .triDown {
+    width: 0;
+    height: 0;
+    left: -50px;
+    top: -250px;
+    border-radius: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 250px solid var(--shape-bg);
+    background-color: transparent;
+    animation:
+      moveDown 29s linear 3s infinite,
+      pulse 29s linear 3s infinite;
+  }
+
+  .shapes .die1 {
+    width: 25px;
+    height: 25px;
+    animation:
+      moveTopRight 25s linear infinite,
+      pulse 25s linear infinite;
+  }
+
+  .shapes .die2 {
+    width: 25px;
+    height: 25px;
+    top: 80px;
+    left: 60px;
+    animation:
+      moveTopRight 22s linear infinite,
+      pulse 22s linear infinite;
+  }
+
+  .shapes .die3 {
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    left: 80px;
+    animation:
+      moveTopRight 23s linear infinite,
+      pulse 23s linear infinite;
+  }
+
+  .shapes .die4 {
+    width: 25px;
+    height: 25px;
+    top: 60px;
+    left: 30px;
+    animation:
+      moveTopRight 24s linear infinite,
+      pulse 24s linear infinite;
+  }
+
+  .shapes .circleDown {
+    width: 1000px;
+    height: 1000px;
+    top: -1000px;
+    left: 35vw;
+    border-radius: 100%;
+    animation:
+      moveCircleDown 65s ease-out 9s infinite,
+      pulse 34s ease-out 4s infinite;
+    opacity: 0.05;
+  }
+
+  @keyframes moveCircleDown {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(200vh);
+    }
+  }
+
+  @keyframes moveTopRight {
+    0% {
+      transform: translateX(100vw) translateY(100vh) scale(1) rotate(0deg);
+    }
+
+    100% {
+      transform: translateX(0vw) translateY(0vh) scale(0) rotate(480deg);
+    }
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(-50vh) rotate(720deg);
+    }
+  }
+
+  @keyframes moveDown {
+    0% {
+      transform: translateY(0) rotate(720deg);
+    }
+
+    100% {
+      transform: translateY(110vh) rotate(0deg);
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+      transform: translateX(110vw) rotate(720deg);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
