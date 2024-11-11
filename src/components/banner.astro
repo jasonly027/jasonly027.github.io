@@ -6,11 +6,13 @@ interface Props {
 const { goto = "#" } = Astro.props;
 ---
 
-<div class="flex items-center justify-center h-[calc(100vh-3.5rem)] w-full relative z-0 shadow-lg">
-  <div class="flex flex-col w-full items-center justify-center space-y-8 z-10">
-    <h1 class="text-6xl text-center sm:text-7xl drop-shadow-xl select-none tracking-wider">NAME HERE</h1>
+<div class="flex place-items-center h-[calc(100vh-3.5rem)] w-full relative z-0 shadow-lg">
+  <div class="flex flex-col w-full place-items-center space-y-8 z-10">
+    <h1 class="text-6xl text-center sm:text-7xl drop-shadow-xl select-none tracking-wider">
+      NAME HERE
+    </h1>
     <a
-      class="border-2 py-2 px-7 text-xl sm:text-2xl hover:border-gray-400"
+      class="border-2 rounded-sm select-none py-2 px-7 text-xl sm:text-2xl hover:border-gray-400 tracking-wider"
       href={goto}
       >Projects</a
     >
@@ -35,7 +37,7 @@ const { goto = "#" } = Astro.props;
     background: linear-gradient(
       0deg,
       rgba(120, 73, 213, 1) 0%,
-      rgba(75, 21, 162, 1) 42%,
+      rgb(75, 21, 162) 42%,
       var(--theme-darkp) 100%
     );
   }

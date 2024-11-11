@@ -4,10 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        lightp: "#6C3EB0",
+        medp: "#4b15a2",
         darkp: "#121222",
-        lightp: "#44355B",
-        oldRose: "#AC7B7D",
+        amethyst: "#9054A4",
         bone: "#ECE2D0",
+        boneDark: "#D8CFBD",
       },
     },
   },

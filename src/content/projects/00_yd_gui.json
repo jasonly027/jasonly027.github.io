@@ -1,0 +1,10 @@
+{
+  "name": "yd_gui",
+  "image": {
+    "src": "./yd_gui.png",
+    "alt": "yd_gui User Interface"
+  },
+  "languages": ["C++", "QML", "CMake"],
+  "tools": ["Qt Quick", "SQLite", "Google Test", "Docker", "GitHub Actions", "lfads", "flkjasdl"],
+  "description": "A QtQuick GUI wrapper for the commandline program, yt-dlp, a video downloader for YouTube."
+}

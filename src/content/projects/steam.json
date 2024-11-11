@@ -1,0 +1,10 @@
+{
+  "name": "Steam Bot",
+  "image": {
+    "src": "./yd_gui.png",
+    "alt": "yd_gui User Interface"
+  },
+  "languages": ["C++", "QML"],
+  "tools": ["Qt Quick", "Docker", "Google Test", "GitHub Actions"],
+  "description": "A GUI wrapper for yt-dlp, a video downloader for YouTube"
+}
