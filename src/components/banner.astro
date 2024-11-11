@@ -6,19 +6,22 @@ interface Props {
 const { goto = "#" } = Astro.props;
 ---
 
-<div class="flex place-items-center h-[calc(100vh-3.5rem)] w-full relative z-0 shadow-lg">
-  <div class="flex flex-col w-full place-items-center space-y-8 z-10">
-    <h1 class="text-6xl text-center sm:text-7xl drop-shadow-xl select-none tracking-wider">
-      NAME HERE
+<div
+  class="relative z-0 flex h-[calc(100vh-3.5rem)] w-full place-items-center shadow-lg"
+>
+  <div class="z-10 flex w-full flex-col place-items-center space-y-8">
+    <h1
+      class="select-none text-center text-6xl tracking-wider drop-shadow-xl sm:text-7xl"
+    >
+      JASON LY
     </h1>
     <a
-      class="border-2 rounded-sm select-none py-2 px-7 text-xl sm:text-2xl hover:border-gray-400 tracking-wider"
-      href={goto}
-      >Projects</a
+      class="select-none rounded-sm border-2 px-7 py-2 text-xl tracking-wider hover:border-gray-400 sm:text-2xl"
+      href={goto}>Projects</a
     >
   </div>
-  <div class="purple-gradient absolute w-full h-full">
-    <div class="shapes absolute w-full h-full overflow-hidden">
+  <div class="purple-gradient absolute h-full w-full">
+    <div class="shapes absolute h-full w-full overflow-hidden">
       <div class="rectRight"></div>
       <div class="rectUp"></div>
       <div class="triDown"></div>

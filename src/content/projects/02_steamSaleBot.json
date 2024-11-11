@@ -1,0 +1,11 @@
+{
+  "name": "Steam Sale Discord Bot",
+  "image": {
+    "src": "./steamSaleBot.png",
+    "alt": "Discord Profile"
+  },
+  "languages": ["Java"],
+  "tools": ["JDA", "Steam Internal API", "MongoDB", "Heroku"],
+  "description": "A Discord bot that tracks Steam apps of your choice and sends alerts when they go on sale.",
+  "github": "https://github.com/jasonly027/Steam-Sale-Discord-Bot"
+}

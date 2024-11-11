@@ -1,0 +1,11 @@
+{
+  "name": "Portfolio Website",
+  "image": {
+    "src": "./portfolio.png",
+    "alt": "Portfolio website"
+  },
+  "languages": ["Typescript"],
+  "tools": ["Astro", "React", "TailwindCSS", "GitHub Pages"],
+  "description": "A portfolio website showcasing my projects.",
+  "github": "https://github.com/jasonly027/portfolio"
+}

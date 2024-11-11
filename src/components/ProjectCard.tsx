@@ -12,9 +12,9 @@ const ProjectCard: React.FC<Props> = ({ project, children }) => {
 
   useEffect(() => {
     if (showWindow) {
-        document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-        document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
   }, [showWindow]);
 
@@ -22,16 +22,15 @@ const ProjectCard: React.FC<Props> = ({ project, children }) => {
     <>
       <article
         onClick={() => setShowWindow(true)}
-        className="border-gray-800 rounded-xl border-2 flex flex-col items-center relative cursor-pointer group"
+        className="group relative flex cursor-pointer flex-col items-center rounded-xl border-2 border-gray-800"
       >
-        <h2 className="text-2xl font-medium m-3 group-hover:text-gray-400">{project.name}</h2>
+        <h2 className="m-3 text-center text-2xl font-medium group-hover:text-gray-400">
+          {project.name}
+        </h2>
         {children}
       </article>
       {showWindow && (
-        <ProjectWindow
-          project={project}
-          setShowWindow={setShowWindow}
-        />
+        <ProjectWindow project={project} setShowWindow={setShowWindow} />
       )}
     </>
   );

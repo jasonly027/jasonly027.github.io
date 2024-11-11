@@ -2,9 +2,10 @@
   "name": "OnRoot",
   "image": {
     "src": "./onroot.png",
-    "alt": "yd_gui User Interface"
+    "alt": "OnRoot website"
   },
-  "languages": ["C++", "QML"],
-  "tools": ["Qt Quick", "Docker", "Google Test", "GitHub Actions"],
-  "description": "A GUI wrapper for yt-dlp, a video downloader for YouTube"
+  "languages": ["Typescript"],
+  "tools": ["Angular", "TailwindCSS", "Google Maps Platform", "Cloudflare Pages"],
+  "description": "Create card-based itineraries that you can share by URL or image.",
+  "github": "https://github.com/onroot/onroot/"
 }

@@ -5,6 +5,7 @@
     "alt": "yd_gui User Interface"
   },
   "languages": ["C++", "QML", "CMake"],
-  "tools": ["Qt Quick", "SQLite", "Google Test", "Docker", "GitHub Actions", "lfads", "flkjasdl"],
-  "description": "A QtQuick GUI wrapper for the commandline program, yt-dlp, a video downloader for YouTube."
+  "tools": ["Qt Quick", "SQLite", "Google Test", "Docker", "GitHub Actions"],
+  "description": "A QtQuick cross-platform GUI wrapper for yt-dlp for downloading YouTube videos.",
+  "github": "https://github.com/jasonly027/yd_gui/"
 }

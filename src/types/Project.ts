@@ -7,4 +7,5 @@ export interface Project  {
   languages: string[];
   tools: string[];
   description: string;
+  github?: string | undefined;
 };

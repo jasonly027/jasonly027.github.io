@@ -2,9 +2,11 @@
 const email = "jason.ly027@gmail.com";
 ---
 
-<nav class="shadow-lg bg-darkp h-14 items-center px-4 flex sticky z-10 top-0">
-  <h1 class="font-semibold text-xl">Jason's Portfolio</h1>
-  <div class="flex-1"></div>
+<nav
+  class="sticky top-0 z-10 flex h-14 items-center justify-center bg-darkp px-4 shadow-lg min-[320px]:justify-between"
+>
+  <h1 class="mx-2 truncate font-semibold sm:text-xl">Jason's Portfolio</h1>
+  <div class="min-[320px]:flex-1"></div>
   <a
     href="https://github.com/jasonly027"
     target="_blank"
@@ -13,7 +15,7 @@ const email = "jason.ly027@gmail.com";
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="fill-current hover:fill-gray-400 size-7"
+      class="mx-2 size-7 fill-current hover:fill-gray-400"
       viewBox="0 0 98 96"
       ><path
         fill-rule="evenodd"
@@ -24,7 +26,7 @@ const email = "jason.ly027@gmail.com";
   </a>
   <a
     href=`mailto:${email}`
-    class="text-xl font-medium px-4 hover:text-gray-400"
+    class="mx-2 truncate font-medium hover:text-gray-400 sm:text-xl"
     title="Email me"
   >
     Contact Me
