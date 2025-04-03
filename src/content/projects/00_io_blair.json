@@ -6,6 +6,6 @@
   },
   "languages": ["C++", "Typescript"],
   "tools": ["React-Three", "Beast WebSockets"],
-  "description": "A co-op WebSocket game in the browser",
+  "description": "A co-op WebSocket game in the browser.",
   "github": "https://github.com/jasonly027/io_blair/"
 }
