@@ -1,0 +1,11 @@
+{
+  "name": "KATE Bot",
+  "image": {
+    "src": "./kate_bot.png",
+    "alt": "Question during a game"
+  },
+  "languages": ["Rust"],
+  "tools": ["Poise", "Docker"],
+  "description": "A Discord bot that quizzes players on their knowledge of English-Japanese translation.",
+  "github": "https://github.com/jasonly027/kate_bot"
+}
