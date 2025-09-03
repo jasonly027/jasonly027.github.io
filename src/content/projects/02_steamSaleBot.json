@@ -4,8 +4,8 @@
     "src": "./steamSaleBot.png",
     "alt": "Sale Alert Messages"
   },
-  "languages": ["Go"],
-  "tools": ["DiscordGo", "Steam Internal API", "MongoDB", "Heroku"],
+  "languages": ["Rust"],
+  "tools": ["Poise", "Steam Internal API", "MongoDB"],
   "description": "A Discord bot that tracks Steam apps of your choice and sends alerts when they go on sale.",
-  "github": "https://github.com/jasonly027/steam_sale_discord_bot_go"
+  "github": "https://github.com/jasonly027/steamsale_bot"
 }
