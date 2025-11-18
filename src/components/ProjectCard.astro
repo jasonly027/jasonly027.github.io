@@ -1,0 +1,76 @@
+---
+import { Picture } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+const { project } = Astro.props;
+const meta = project.data;
+const { Content } = await render(project);
+---
+
+<article
+  class="border-surface flex max-w-[1000px] flex-col gap-1 rounded-md border-2 p-4"
+>
+  <div class="flex items-start justify-between">
+    <h1 class="text-2xl font-bold">{meta.name}</h1>
+    <time
+      datetime={meta.releaseDate.toISOString().substring(0, 10)}
+      class="font-semibold">{meta.period}</time
+    >
+  </div>
+
+  <p class="text-muted text-lg font-semibold">{meta.genericName}</p>
+
+  <div
+    class="from-surface via-accent/40 to-surface border-outline flex w-[min(80vw,800px)] justify-center self-center rounded-md border bg-linear-to-br"
+  >
+    <Picture
+      src={meta.image}
+      alt="Project Preview"
+      height={500}
+      layout="constrained"
+    />
+  </div>
+
+  <div class="flex flex-wrap justify-between">
+    <div>
+      <h2 class="inline text-lg font-semibold">Languages:</h2>
+      <p class="mr-2 inline">{meta.languages.join(', ')}</p>
+    </div>
+
+    <div>
+      <h2 class="inline text-lg font-semibold">Tech Stack:</h2>
+      <p class="inline">{meta.stack.join(', ')}</p>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap justify-between">
+    {
+      meta.link && (
+        <a
+          href={meta.link}
+          target="_blank"
+          class="text-primary hover:text-accent mr-2 text-lg font-semibold underline"
+        >
+          Code Repository Link
+        </a>
+      )
+    }
+    {
+      meta.deployment && (
+        <div>
+          <h2 class="inline text-lg font-semibold">Deployment: </h2>
+          <p class="inline">{meta.deployment}</p>
+        </div>
+      )
+    }
+  </div>
+
+  <hr class="text-surface my-3" />
+
+  <h2 class="text-lg font-semibold">Description</h2>
+  <Content />
+</article>

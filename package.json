@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,13 +13,13 @@
   "dependencies": {
     "@astrojs/check": "^0.9.5",
     "@astrojs/react": "^4.4.2",
-    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/vite": "^4.1.17",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "astro": "^5.15.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind": "^4.0.0"
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -27,7 +27,8 @@
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-astro": "^1.5.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
