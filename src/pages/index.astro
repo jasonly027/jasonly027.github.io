@@ -11,9 +11,9 @@ const projects = (await getCollection('projects')).sort(
 ---
 
 <BaseLayout title="Projects" description={description}>
-  <div class="mb-4 flex flex-col items-center gap-4 px-2 py-1">
+  <div class="mx-10 mb-10 flex flex-col items-center gap-10 px-2 py-1">
     <header
-      class="border-surface hover:border-primary mt-2 rounded-md border-2 p-4 transition-colors"
+      class="border-surface bg-background hover:border-primary mt-10 rounded-md border-2 p-4 transition-colors"
     >
       <h1 class="mb-2 text-4xl font-bold tracking-wide">Projects</h1>
       <p class="text-muted tracking-wide">{description}</p>

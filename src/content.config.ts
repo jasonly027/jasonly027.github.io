@@ -9,7 +9,7 @@ const projects = defineCollection({
       name: z.string(),
       genericName: z.string(),
       image: image(),
-      icon: z.string().url().optional(),
+      icon: image().optional(),
       releaseDate: z.date(),
       period: z.string().regex(/^(Spring|Summer|Fall|Winter) \d{4}$/),
       languages: z.string().array(),

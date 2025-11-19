@@ -13,6 +13,45 @@
 
   --color-accent: #8662da;
   --color-primary: #7248f0;
+
+  --animate-slideDown: slideDown linear 35s infinite,
+    fadeInOut linear 35s infinite;
+  @keyframes slideDown {
+    to {
+      opacity: 0%;
+      transform: translateY(calc(100vh + 100%));
+    }
+  }
+
+  --animate-slideUp: slideUp linear 35s infinite, fadeInOut linear 35s infinite;
+  @keyframes slideUp {
+    to {
+      transform: translateY(calc(-100vh - 100%));
+    }
+  }
+
+  --animate-slideRight: slideRight linear 35s infinite,
+    fadeInOut linear 35s infinite;
+  @keyframes slideRight {
+    to {
+      transform: translateX(calc(100vw + 100%));
+    }
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0%;
+    }
+    10% {
+      opacity: 5%;
+    }
+    90% {
+      opacity: 5%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
 }
 
 body {

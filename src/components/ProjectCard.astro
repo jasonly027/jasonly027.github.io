@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets';
+import { Picture, Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import { render } from 'astro:content';
 
@@ -12,10 +12,15 @@ const { Content } = await render(project);
 ---
 
 <article
-  class="border-surface flex max-w-[1000px] flex-col gap-1 rounded-md border-2 p-4"
+  class="border-surface bg-background flex max-w-[1000px] flex-col gap-1 rounded-md border-2 p-4"
 >
   <div class="flex items-start justify-between">
-    <h1 class="text-2xl font-bold">{meta.name}</h1>
+    <div class="mr-2 flex items-center gap-2">
+      {meta.icon && <Image src={meta.icon} alt="" height={30} />}
+      <h1 class="text-2xl font-bold tracking-wide">
+        {meta.name}
+      </h1>
+    </div>
     <time
       datetime={meta.releaseDate.toISOString().substring(0, 10)}
       class="font-semibold">{meta.period}</time
@@ -24,16 +29,18 @@ const { Content } = await render(project);
 
   <p class="text-muted text-lg font-semibold">{meta.genericName}</p>
 
-  <div
-    class="from-surface via-accent/40 to-surface border-outline flex w-[min(80vw,800px)] justify-center self-center rounded-md border bg-linear-to-br"
+  <a href={meta.link} target="_blank" class="self-center"
+    ><div
+      class="from-surface via-accent/40 to-surface border-outline flex w-[min(80vw,800px)] justify-center rounded-md border bg-linear-to-br"
+    >
+      <Picture
+        src={meta.image}
+        alt="Project Preview"
+        height={500}
+        layout="constrained"
+      />
+    </div></a
   >
-    <Picture
-      src={meta.image}
-      alt="Project Preview"
-      height={500}
-      layout="constrained"
-    />
-  </div>
 
   <div class="flex flex-wrap justify-between">
     <div>
