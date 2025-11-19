@@ -1,0 +1,26 @@
+---
+import AnimatedBackground from '../components/AnimatedBackground.astro';
+import BaseHead from '../components/BaseHead.astro';
+import NavBar from '../components/NavBar.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth" transition:animate="none">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <AnimatedBackground />
+    <NavBar />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

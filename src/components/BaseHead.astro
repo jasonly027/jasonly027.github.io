@@ -1,0 +1,36 @@
+---
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title: subtitle, description } = Astro.props;
+
+const siteName = "Jason's Portfolio";
+const title = `${siteName} - ${subtitle}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+---
+
+<link rel="icon" type="image/svg+xml" href="icon.svg?" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
+<meta name="og:title" content={title} />
+<meta name="twitter:title" content={title} />
+
+<meta name="description" content={description} />
+<meta property="og:description" content={description} />
+<meta name="twitter:description" content={description} />
+
+<link rel="canonical" href={canonicalUrl} />
+<meta property="og:url" content={canonicalUrl} />
+
+<meta property="og:site_name" content={siteName} />
+
+<meta property="og:type" content="website" />
+
+<ClientRouter />
